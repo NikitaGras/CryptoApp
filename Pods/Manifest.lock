@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (5.4.1)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - Kingfisher (6.1.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2)
+  - Charts
+  - Kingfisher (~> 6.0)
+  - NVActivityIndicatorView
+  - Toast-Swift (~> 5.0.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Charts
+    - Kingfisher
+    - NVActivityIndicatorView
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  Kingfisher: f5d8d60a0ef3edd642fd781bae60918599901aff
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: 8fb15d4cc8988b40fd61e1d7032b09898557edbf
+
+COCOAPODS: 1.10.1

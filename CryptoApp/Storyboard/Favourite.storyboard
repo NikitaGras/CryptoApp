@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GMB-Lj-qxV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Избранное-->
+        <scene sceneID="59l-3p-i8p">
+            <objects>
+                <viewController id="VWm-EK-ed3" customClass="FavouriteViewController" customModule="CryptoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SRw-Kf-z3T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="obB-cG-KNH">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3n-Vb-e5i">
+                                <rect key="frame" x="188.5" y="433" width="37" height="30"/>
+                                <state key="normal" title="Retry"/>
+                                <connections>
+                                    <action selector="retry:" destination="VWm-EK-ed3" eventType="touchUpInside" id="U2F-OI-VRT"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a9t-wG-L33">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Список пуст. Добавьте криптовалюту, чтобы увидеть её здесь" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVL-Wb-m8d">
+                                <rect key="frame" x="40" y="412" width="334" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0vi-O9-2Br"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hVL-Wb-m8d" firstAttribute="leading" secondItem="SRw-Kf-z3T" secondAttribute="leading" constant="40" id="9I7-aX-6Qj"/>
+                            <constraint firstItem="a9t-wG-L33" firstAttribute="bottom" secondItem="0vi-O9-2Br" secondAttribute="bottom" id="FVg-7U-nvw"/>
+                            <constraint firstItem="obB-cG-KNH" firstAttribute="centerY" secondItem="SRw-Kf-z3T" secondAttribute="centerY" id="Wy3-DM-Lmj"/>
+                            <constraint firstItem="a9t-wG-L33" firstAttribute="top" secondItem="0vi-O9-2Br" secondAttribute="top" id="YnS-8j-jqL"/>
+                            <constraint firstItem="obB-cG-KNH" firstAttribute="centerX" secondItem="SRw-Kf-z3T" secondAttribute="centerX" id="atS-k5-USR"/>
+                            <constraint firstItem="hVL-Wb-m8d" firstAttribute="centerX" secondItem="SRw-Kf-z3T" secondAttribute="centerX" id="dle-WN-QOG"/>
+                            <constraint firstItem="W3n-Vb-e5i" firstAttribute="centerX" secondItem="SRw-Kf-z3T" secondAttribute="centerX" id="gus-KA-Uts"/>
+                            <constraint firstItem="a9t-wG-L33" firstAttribute="trailing" secondItem="0vi-O9-2Br" secondAttribute="trailing" id="hiX-pk-zi0"/>
+                            <constraint firstAttribute="trailing" secondItem="hVL-Wb-m8d" secondAttribute="trailing" constant="40" id="kqZ-ZZ-ENc"/>
+                            <constraint firstItem="W3n-Vb-e5i" firstAttribute="centerY" secondItem="SRw-Kf-z3T" secondAttribute="centerY" id="nXw-nb-xaS"/>
+                            <constraint firstItem="hVL-Wb-m8d" firstAttribute="centerY" secondItem="SRw-Kf-z3T" secondAttribute="centerY" id="odZ-Na-nMB"/>
+                            <constraint firstItem="a9t-wG-L33" firstAttribute="leading" secondItem="0vi-O9-2Br" secondAttribute="leading" id="qfh-ur-vsx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Избранное" id="GoY-Al-5KK"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="obB-cG-KNH" id="gIi-Jp-LIK"/>
+                        <outlet property="emptyLabel" destination="hVL-Wb-m8d" id="R7S-ji-AwF"/>
+                        <outlet property="retryButton" destination="W3n-Vb-e5i" id="KaY-bO-0Zb"/>
+                        <outlet property="tableView" destination="a9t-wG-L33" id="sRz-ja-4LC"/>
+                        <segue destination="YBQ-Fl-M3n" kind="show" identifier="showInfo" id="EQy-eB-iVM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cb0-k8-ivq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2870" y="-599"/>
+        </scene>
+        <!--CoinInfoViewController-->
+        <scene sceneID="58o-3U-CDs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Coins" referencedIdentifier="CoinInfoViewController" id="YBQ-Fl-M3n" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="aGs-zq-ngO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xxh-PQ-Lfd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3669" y="-599"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qz7-ku-c57">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GMB-Lj-qxV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="star" id="4bq-kN-1ka">
+                        <inset key="imageInsets" minX="0.0" minY="-6" maxX="0.0" maxY="6"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tvs-7U-CPL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VWm-EK-ed3" kind="relationship" relationship="rootViewController" id="qqN-8R-9Px"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BhA-pt-UVk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1961" y="-599"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star" width="21.333333969116211" height="21.333333969116211"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
